@@ -6,6 +6,7 @@ let inputPassword1 = document.querySelector("#inputPassword1");
 let inputPassword2 = document.querySelector("#inputPassword2");
 
 let eyeIcon = document.querySelectorAll("i");
+let generate = document.querySelector("#generate");
 
 // ## #NOM 
 
@@ -84,19 +85,14 @@ eyeIcon.forEach(i => {
 			const type = inputPassword2.getAttribute("type") === "password" ? "text" : "password";
 			inputPassword2.setAttribute("type", type);
 		}
-
-		// const inputPasswordAll = document.querySelectorAll("input[type=password]")
-		// console.log(inputPasswordAll);
-
-		// inputPasswordAll.forEach(e => {
-		// 	console.log(e.getAttribute("type"));
-
-		// 	if (e.getAttribute("type") == "password"){
-		// 		e.setAttribute("type", "text");
-		// 	}
-		// 	else if(e.getAttribute("type") == "text"){
-		// 		e.setAttribute("type", "password");
-		// 	}
-		// })
 	});
+});
+
+// ### GENERER UN MOT DE PASSE
+
+generate.addEventListener("click", function(){
+	let password = getRandomPassword();
+
+	inputPassword1.value = password;
+	inputPassword2.value = password;
 });
