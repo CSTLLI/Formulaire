@@ -75,7 +75,7 @@ eyeIcon.forEach(i => {
 		i.classList.toggle("bi-eye-fill");
 
 		eyeID = i.id;
-		console.log(eyeID);
+		// console.log(eyeID);
 
 		if (eyeID == "eye1"){
 			const type = inputPassword1.getAttribute("type") === "password" ? "text" : "password";
