@@ -63,3 +63,40 @@ function checkSameValue(input1, input2, valHelp){
 		input2.classList.add("form-control", "is-valid");	
 	}
 }
+
+// Générateur de mot de passe 
+
+function getRandomPassword(){
+
+	let password;
+	// définit la taille du mot de passe
+	const passwordLength = Math.floor(Math.random() * 10 + 15);
+	// console.log(lengthPassword);
+
+	const c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ12345679!@#$+-*&_";
+	const s = "!@#$+-*&_";
+
+	// définit la position d'un caractère alpha
+	const alphaLenght = Math.floor(Math.random() * 25);
+	// console.log(alphaLenght, c[alphaLenght]);
+
+	// définit la position d'un caractère en capital
+	const capLenght = Math.floor(Math.random() * 25 + 26);
+	// console.log(capLenght, c[capLenght]);
+
+	// définit la position d'un chiffre
+	const numberLenght = Math.floor(Math.random() * 9 + 62);
+	// console.log(numberLenght);
+
+	// définit la position d'un caractère spécial
+	const caracSpeLenght = Math.floor(Math.random() * s.length);
+	// console.log(s[caracSpeLenght]);
+
+	password = c[alphaLenght] + c[capLenght] + c[numberLenght] + s[caracSpeLenght]; 
+
+	for (i = 0; i <= passwordLength; i++){
+		password += c[Math.floor(Math.random() * c.length)];
+	}
+
+	return password;
+}
