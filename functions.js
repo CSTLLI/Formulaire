@@ -85,7 +85,7 @@ function getRandomPassword(){
 	// console.log(capLenght, c[capLenght]);
 
 	// définit la position d'un chiffre
-	const numberLenght = Math.floor(Math.random() * 9 + 62);
+	const numberLenght = Math.floor(Math.random() * 8 + 59);
 	// console.log(numberLenght);
 
 	// définit la position d'un caractère spécial
@@ -104,49 +104,67 @@ function getRandomPassword(){
 // Vérification du mot de passe
 
 function passwordAnalyze(password){
+
+	let indice = 0;
+
 	// Contient au moins 12 caractères
 	if (password.length >= 12){
 		password1Help.classList.remove("red");
 		password1Help.classList.add("green");
+		indice++;
 	}else{
 		password1Help.classList.remove("green");
-		password1Help.classList.add("red");		
+		password1Help.classList.add("red");	
 	}
 
 	// Contient au moins 1 lettre capitale
 	if (password.match(/[A-Z]/g)){
 		password2Help.classList.remove("red");
 		password2Help.classList.add("green");
+		indice++;
 	}else{
 		password2Help.classList.remove("green");
-		password2Help.classList.add("red");		
+		password2Help.classList.add("red");	
 	}
 
 	// Contient au moins un nombre
 	if (password.match(/[0-9]/g)){
 		password3Help.classList.remove("red");
 		password3Help.classList.add("green");
+		indice++;
 	}else{
 		password3Help.classList.remove("green");
-		password3Help.classList.add("red");		
+		password3Help.classList.add("red");	
 	}
 
 	// Contient au moins un caractère spécial
 	if (password.match(/[!-/]/g)){
 		password4Help.classList.remove("red");
 		password4Help.classList.add("green");
+		indice++;
 	}else{
 		password4Help.classList.remove("green");
-		password4Help.classList.add("red");		
+		password4Help.classList.add("red");	
 	}
 
 	//Contient pas d'espace
-	if (password.match(/[/s /S]/)){
+	if (password.match(/[\s/]/)){
 		password5Help.classList.remove("green");
 		password5Help.classList.add("red");
 	}else{
 		password5Help.classList.remove("red");
-		password5Help.classList.add("green");		
+		password5Help.classList.add("green");	
+		indice++;	
+	}
+
+	console.log(indice);
+
+	if (indice != 5){
+		inputPassword1.removeAttribute('class');
+		inputPassword1.classList.add("form-control", "is-invalid");
+	}else{
+		inputPassword1.removeAttribute('class');
+		inputPassword1.classList.add("form-control", "is-valid");
 	}
 }
 

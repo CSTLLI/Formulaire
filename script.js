@@ -98,4 +98,6 @@ generate.addEventListener("click", function(){
 
 	inputPassword1.value = password;
 	inputPasswordConfirm.value = password;
+
+	passwordAnalyze(password);
 });
