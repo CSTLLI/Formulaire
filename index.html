@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Formulaire</title>
+
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+		<script src="functions.js" type="text/javascript" defer></script>
+		<script src="script.js" type="text/javascript" defer></script>
+
+    </head>
+    <body class="m-0 p-0 d-flex">
+		<section class="container d-flex flex-column justify-content-center w-75 my-5 py-5 border border-dark rounded">
+			<h1>Formulaire</h1>
+
+			<form>
+				<!-- Nom -->
+				<div class="mb-3">
+					<label for="inputName" class="form-label">Nom</label>
+					<input type="text" class="form-control" id="inputName" aria-describedby="nameHelp">
+					<div id="nameHelp" class="form-text"></div>
+				</div>
+
+				<!-- Prenom -->
+				<div class="mb-3">
+					<label for="inputFirstName" class="form-label">Prénom</label>
+					<input type="text" class="form-control" id="inputFirstName" aria-describedby="firstNameHelp">
+					<div id="firstNameHelp" class="form-text"></div>
+				</div>
+
+				<!-- Pseudo -->
+				<div class="mb-3">
+					<label for="inputPseudo" class="form-label">Pseudo</label>
+					<input type="text" class="form-control" id="inputPseudo" aria-describedby="pseudoHelp">
+					<div id="pseudoHelp" class="form-text"></div>
+				</div>
+
+				<!-- Mail -->
+				<div class="mb-3">
+					<label for="inputEmail" class="form-label">Adresse mail</label>
+					<input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required>
+					<div id="emailHelp" class="form-text"></div>
+				</div>
+
+				<!-- Mot de passe -->
+				<div class="mb-3">
+					<label for="inputPassword1" class="form-label">Mot de passe</label>
+
+					<div class="d-flex">
+						<input type="password" class="form-control" id="inputPassword1">
+
+						<span class="input-group-text">
+							<i class="bi bi-eye-slash-fill" id="eye1" style="cursor: pointer"></i>
+						</span>				  
+					</div>
+
+					<div id="password1Help" class="form-text"></div>
+				</div>
+	
+				<div class="mb-3">
+					<label for="inputPassword2" class="form-label">Confirmer le mot de passe</label>
+
+					<div class="d-flex">
+						<input type="password" class="form-control" id="inputPassword2">
+
+						<span class="input-group-text">
+							<i class="bi bi-eye-slash-fill" id="eye2" style="cursor: pointer"></i>
+						</span>							
+					</div>
+
+					<div id="password2Help" class="form-text"></div>
+				</div>
+
+				<!-- Confirmation -->
+				<button type="submit" class="btn btn-primary">Valider les informations</button>
+			</form>
+		</section>
+</html>
