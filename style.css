@@ -1,11 +1,24 @@
-.form-text{
-	color: #d00000 !important;
+body{
+	background-color: rgba(154, 156, 151, 0.2)
 }
 
 section{
 	box-shadow: 30px 30px 32px;
+	border: 2px solid rgb(70, 55, 55);
+}
+
+.red{
+	color: #d00000 !important;
+}
+
+.green{
+	color: #05833c;
 }
 
 .pass{
 	background-color: white;
+}
+
+.errors ul li{
+	margin: 5px;
 }

@@ -3,7 +3,7 @@ let inputFirstName = document.querySelector("#inputFirstName");
 let inputPseudo = document.querySelector("#inputPseudo");
 let inputEmail = document.querySelector("#inputEmail");
 let inputPassword1 = document.querySelector("#inputPassword1");
-let inputPassword2 = document.querySelector("#inputPassword2");
+let inputPassword2 = document.querySelector("#inputPasswordConfirm");
 
 let eyeIcon = document.querySelectorAll("i");
 let generate = document.querySelector("#generate");
@@ -53,19 +53,22 @@ inputEmail.addEventListener('input', function(){
 inputPassword1.addEventListener('input', function(){
 
 	let password1Help = document.querySelector("#password1Help");
+	let password2Help = document.querySelector("#password2Help");
+	let password3Help = document.querySelector("#password3Help");
+	let password4Help = document.querySelector("#password4Help");
+	let password5Help = document.querySelector("#password5Help");
 
-	checkLength(inputPassword1, password1Help);
-	checkNbLength(inputPassword1, password1Help, 6);
+	passwordAnalyze(inputPassword1.value);
 });
 
 // ### CONFIRMATION DE MOT DE PASSE
 
-inputPassword2.addEventListener('input', function(){
+inputPasswordConfirm.addEventListener('input', function(){
 
-	let password2Help = document.querySelector("#password2Help");
+	let passwordConfirmHelp = document.querySelector("#passwordConfirmHelp");
 
-	checkLength(inputPassword2, password2Help);
-	checkSameValue(inputPassword1, inputPassword2, password2Help);
+	checkLength(inputPasswordConfirm, passwordConfirmHelp);
+	checkSameValue(inputPassword1, inputPasswordConfirm, passwordConfirmHelp);
 });
 
 // ### ICONE 
@@ -82,8 +85,8 @@ eyeIcon.forEach(i => {
 			const type = inputPassword1.getAttribute("type") === "password" ? "text" : "password";
 			inputPassword1.setAttribute("type", type);
 		}else if (eyeID == "eye2"){
-			const type = inputPassword2.getAttribute("type") === "password" ? "text" : "password";
-			inputPassword2.setAttribute("type", type);
+			const type = inputPasswordConfirm.getAttribute("type") === "password" ? "text" : "password";
+			inputPasswordConfirm.setAttribute("type", type);
 		}
 	});
 });
@@ -94,5 +97,5 @@ generate.addEventListener("click", function(){
 	let password = getRandomPassword();
 
 	inputPassword1.value = password;
-	inputPassword2.value = password;
+	inputPasswordConfirm.value = password;
 });
