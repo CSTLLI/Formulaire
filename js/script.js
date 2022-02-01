@@ -1,3 +1,16 @@
+/* ************************************************************************************** */
+/*                                                                                        */																					  
+/* Project: Formulaire                                  / $$      /$$ /$$$$$$$$ /$$$$$$   */
+/*                  			                        | $$  /$ | $$| $$_____//$$__  $$  */
+/* script.js                                     	    | $$ /$$$| $$| $$     |__/  \ $$  */
+/*                                                  	| $$/$$ $$ $$| $$$$$     /$$$$$/  */
+/* By: vcastell <valeriocastellipro@gmail.com>	        | $$$$_  $$$$| $$__/    |___  $$  */
+/*                                              		| $$$/ \  $$$| $$      /$$  \ $$  */
+/* Created: 2022/01/31 09:30:30 vcastell     	        | $$/   \  $$| $$     |  $$$$$$/  */
+/* Updated: 2022/02/01 09:30:28 vcastell                |__/     \__/|__/      \______/   */
+/*                                                                    				      */
+/******************************************************************************************/
+
 let inputName = document.querySelector("#inputName");
 let inputFirstName = document.querySelector("#inputFirstName");
 let inputPseudo = document.querySelector("#inputPseudo");
