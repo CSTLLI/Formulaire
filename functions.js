@@ -90,7 +90,7 @@ function getRandomPassword(){
 
 	// définit la position d'un caractère spécial
 	const caracSpeLenght = Math.floor(Math.random() * s.length);
-	console.log(s[caracSpeLenght]);
+	// console.log(s[caracSpeLenght]);
 
 	password = c[alphaLenght] + c[capLenght] + c[numberLenght] + s[caracSpeLenght]; 
 
