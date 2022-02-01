@@ -81,16 +81,16 @@ function getRandomPassword(){
 	// console.log(alphaLenght, c[alphaLenght]);
 
 	// définit la position d'un caractère en capital
-	const capLenght = Math.floor(Math.random() * 25 + 26);
+	const capLenght = Math.floor(Math.random() * 25 + 25);
 	// console.log(capLenght, c[capLenght]);
 
 	// définit la position d'un chiffre
-	const numberLenght = Math.floor(Math.random() * 8 + 59);
-	// console.log(numberLenght);
+	const numberLenght = Math.floor(Math.random() * 8 + 52);
+	// console.log(numberLenght, c[numberLenght]);
 
 	// définit la position d'un caractère spécial
 	const caracSpeLenght = Math.floor(Math.random() * s.length);
-	// console.log(s[caracSpeLenght]);
+	console.log(s[caracSpeLenght]);
 
 	password = c[alphaLenght] + c[capLenght] + c[numberLenght] + s[caracSpeLenght]; 
 
@@ -138,7 +138,7 @@ function passwordAnalyze(password){
 	}
 
 	// Contient au moins un caractère spécial
-	if (password.match(/[!-/]/g)){
+	if (password.match(/[!-@/]/g)){
 		password4Help.classList.remove("red");
 		password4Help.classList.add("green");
 		indice++;
@@ -157,7 +157,7 @@ function passwordAnalyze(password){
 		indice++;	
 	}
 
-	console.log(indice);
+	// console.log(indice);
 
 	if (indice != 5){
 		inputPassword1.removeAttribute('class');
